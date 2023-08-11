@@ -58,7 +58,8 @@ class ProduitController extends Controller
     }
     public function welcome()
     {
-        $produits = produit::all();
+        
+        $produits = produit::paginate(5);
         return view('welcome',compact('produits'));
     }
 

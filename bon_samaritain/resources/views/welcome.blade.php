@@ -187,6 +187,7 @@
                     <h4 class="card-title" id="liste des produits ajoutés">Liste des produits</h4>
                     <div class="table-responsive">
                       <table class="table">
+                        {{ $produits->links() }}
                         <thead>
                           <tr>
                           <tr>
@@ -214,7 +215,7 @@
                     
                     <td>
                     <!-- <a href="" class="btn btn-success">Cliquez là pour effectuer une action</a> -->
-                        <a href="" class="btn btn-success">Afficher</a>
+                        <a href="{{ url('detail/'.$produit->id)}}" class="btn btn-success">Afficher</a>
                         <a href="{{ route('produit.edit', $produit->id) }}" class="btn btn-primary">Modifier</a>
                         <a href="{{ route('destroy.produit', $produit->id) }}" style="display: inline;">
                           

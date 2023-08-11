@@ -66,6 +66,9 @@ Route::delete('/crud/{crud}', [CrudController::class, 'destroy'])->name('crud.de
 
 Route::resource('produit', ProduitController::class);
 
+//affichage
+Route::get('/detail/{id}',[ProductController::class,'afficher'])->name('present');
+
 
 //middleware
 
